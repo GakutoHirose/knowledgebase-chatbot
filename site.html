@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>学内ヘルプサイト</title>
+    <style>
+      /* Header */
+      h1 {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 1.6;
+        color: #333;
+      }
+      p {
+        font-family: 'Yu Gothic', sans-serif;
+        font-size: 1.5rem;
+        color: #666;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      #chatbot-button {
+  position: fixed;
+  bottom: 10px;
+  right: 110px; /* 左に100px動かす */
+  background-color: #F76E5D;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#chatbot-button::after {
+  content: '→'; /* →を追加 */
+  margin-left: 5px; /* テキストとのスペースを追加 */
+}
+
+      /* Footer */
+      footer {
+        margin-top: 40px;
+        padding: 10px;
+        background-color: #EEE;
+        text-align: center;
+      }
+      footer p {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 5px;
+      }
+      footer a {
+        color: #333;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>学内ヘルプサイト</h1>
+      <p>本サイトは学内での問い合わせに対応するためのヘルプサイトです。</p>
+    </header>
+
+    <div id="chatbot-wrapper">
+      <div id="chatbot-button">質問はこちらから</div>
+      <df-messenger
+        chat-icon="https://i.ibb.co/grGn1Vy/baseline-question-answer-white-24dp.png"
+        intent="WELCOME"
+        chat-title="学内サポートボット"
+        agent-id="795dfd65-2cb2-433c-b994-725b92c51bc1"
+        language-code="ja"
+      ></df-messenger>
+    </div>
+
+    <footer>
+      <p>学校法人 角川ドワンゴ学園 学内ヘルプサイト「N/S ナレッジベース」</p>
+      <p>経験学習部 体験学習企画課（担当: 鶴岡･横内）</p>
+      <p><a href="https://sites.google.com/nnn.ed.jp/knowledgebase/committee-member">実行委員に関する詳細</a></p>
+      <p>© KADOKAWA DWANG</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"> </script>
